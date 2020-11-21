@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace XBase\DataConverter\Record;
 
@@ -9,6 +11,7 @@ use XBase\DataConverter\Field\DBase\LogicalConverter;
 use XBase\DataConverter\Field\DBase\MemoConverter;
 use XBase\DataConverter\Field\DBase\NumberConverter;
 use XBase\DataConverter\Field\DBase\StringConverter;
+use XBase\DataConverter\Field\DBase\FloatConverter;
 use XBase\DataConverter\Field\FieldDataConverterInterface;
 use XBase\Exception\InvalidColumnException;
 use XBase\Record\AbstractRecord;
@@ -37,6 +40,7 @@ class DBaseDataConverter implements RecordDataConverterInterface
             MemoConverter::class,
             NumberConverter::class,
             StringConverter::class,
+            FloatConverter::class,
         ];
     }
 
